@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Control</title>
+  <body>
+      
+<style>
+
+input[type=text]{
+  border-style: groove;
+  border-width: 0px;
+  border-color:rgb(172, 194, 214); 
+}
+body {background-color: rgb(240, 168, 168);}
+center {background-color: rgb(255, 255, 255);}
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 25px;
+  background: #e95b66;
+  outline: none;
+  opacity: 0.7; 
+}
+ 
+</style>
+<center>
+    <form action="ArmControl.php" method="post">
+
+        <label for="vol"> Motor 1 </label>
+        <input type="range"  min="0" max="180" value="0" id="get" onchange="fetch()">
+                    <input type="text" id="put" placeholder="0" name="Base" </input>
+        <br>
+        <label for="vol"> Motor 2 </label>
+        <input type="range"  min="0" max="180" value="0" id="get1" onchange="fetch1()">
+                    <input type="text" id="put1" placeholder="0" name="Base" </input>
+        <br>
+        <label for="vol"> Motor 3 </label>
+        <input type="range"  min="0" max="180" value="0" id="get2" onchange="fetch2()">
+        <input type="text" id="put2" placeholder="0" name="Base" </input>
+        <br>
+        <label for="vol"> Motor 4 </label>
+        <input type="range"  min="0" max="180" value="0" id="get3" onchange="fetch3()">
+                    <input type="text" id="put3" placeholder="0" name="Base" </input>
+        <br>
+        <label for="vol"> Motor 5 </label>
+        <input type="range"  min="0" max="180" value="0" id="get4" onchange="fetch4()">
+                    <input type="text" id="put4" placeholder="0" name="Base" </input>
+
+        <br>
+        <label for="vol"> Motor 6 </label>
+        <input type="range"  min="0" max="180" value="0" id="get5" onchange="fetch5()">
+                    <input type="text" id="put5" placeholder="0" name="Base" </input>
+                    <br><input type="submit" value="Save">
+                    <input type="submit" value="Run">
+      </form>
+
+      <script class="numbwers">
+        function fetch() {
+            let get = document.getElementById("get").value;
+            document.getElementById("put").value = get;
+        }
+        function fetch1() {
+            let get = document.getElementById("get1").value;
+            document.getElementById("put1").value = get;
+        }
+        function fetch2() {
+            let get = document.getElementById("get2").value;
+            document.getElementById("put2").value = get;
+        }
+        function fetch3() {
+            let get = document.getElementById("get3").value;
+            document.getElementById("put3").value = get;
+        }
+        function fetch4() {
+            let get = document.getElementById("get4").value;
+            document.getElementById("put4").value = get;
+        }
+        function fetch5() {
+            let get = document.getElementById("get5").value;
+            document.getElementById("put5").value = get;
+        }
+    </script>
+    </center>
+  </body>
+ </head>
+</html>
+
+
+
+
